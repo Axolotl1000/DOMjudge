@@ -22,7 +22,7 @@ for name in users:
             oldTime = time
             oldIP = ip
             continue
-        if (time - oldTime) < 10 and oldIP != ip:
+        if (time - oldTime) <= 10 and oldIP != ip:
             is_suspect = True
             break
         oldTime = time
@@ -31,4 +31,7 @@ for name in users:
     if is_suspect:
         sus.append(name)
 
-print("\n".join(sorted(sus)))
+if sus:
+    print("\n".join(sorted(sus)))
+else:
+    print("None")
