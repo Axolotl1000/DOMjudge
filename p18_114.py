@@ -1,5 +1,3 @@
-# WA
-
 count, mod = (int(i) for i in input().split(" "))
 
 def hash(s: str) -> int:
